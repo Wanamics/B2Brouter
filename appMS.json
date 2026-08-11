@@ -1,0 +1,39 @@
+{
+  "id": "b4305a63-f987-425b-8520-ca9ccf7b22b6",
+  "name": "B2Brouter Connector",
+  "publisher": "Wanamics Fork",
+  "version": "28.4.53241.53313",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {                                                                                                                                                                                                                                                                                                               
+      "id": "e1d97edc-c239-46b4-8d84-6368bdf67c8b",
+      "name": "E-Document Core",
+      "publisher": "Microsoft",
+      "version": "28.4.53241.53312"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "28.0.0.0",
+  "idRanges": [
+    {
+      "from": 86490,
+      "to": 86499
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "17.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
