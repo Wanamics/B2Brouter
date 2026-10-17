@@ -4,8 +4,9 @@
 // ------------------------------------------------------------------------------------------------
 namespace Wanamics.EServices.EDocumentConnector.B2Brouter;
 
-permissionset 86492 "B2Brouter Objects"
+permissionset 86492 "B2BrouterW Objects"
 {
+    Caption = 'B2Brouter (Wanamics) Objects';
     Access = Public;
     Assignable = false;
 

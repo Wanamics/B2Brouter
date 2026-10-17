@@ -15,24 +15,34 @@ table 86490 "B2Brouter Setup"
         {
             Caption = 'Primary Key';
             ToolTip = 'Specifies the primary key for the B2Brouter setup.';
+            DataClassification = SystemMetadata;
         }
 
-        field(2; "Production Project"; Text[1024])
+        field(2; "Production Account ID"; Text[1024])
         {
-            Caption = 'Project';
-            ToolTip = 'Specifies the project name for the B2Brouter production environment.';
+            Caption = 'Production Account ID';
+            ToolTip = 'Specifies the Account ID for the B2Brouter production environment.';
+            DataClassification = SystemMetadata;
         }
 
-        field(3; "Sandbox Project"; Text[1024])
+        field(3; "Sandbox Account ID"; Text[1024])
         {
-            Caption = 'Sandbox Project';
-            ToolTip = 'Specifies the project name for the B2Brouter sandbox environment.';
+            Caption = 'Sandbox Account ID';
+            ToolTip = 'Specifies the Account ID for the B2Brouter sandbox environment.';
+            DataClassification = SystemMetadata;
         }
 
         field(4; "Sandbox Mode"; Boolean)
         {
             Caption = 'Sandbox Mode';
             ToolTip = 'Specifies whether the connector is in sandbox mode.';
+            DataClassification = SystemMetadata;
+        }
+        field(86500; "GET Request Only"; Boolean)
+        {
+            Caption = 'GET Request Only';
+            ToolTip = 'Avoid B2Brouter data modifications in test mode by allowing only GET requests to be sent to B2Brouter.';
+            DataClassification = SystemMetadata;
         }
     }
 
@@ -58,7 +68,7 @@ table 86490 "B2Brouter Setup"
         DeleteApiKeys();
     end;
 
-    procedure DeleteApiKeys()
+    local procedure DeleteApiKeys()
     begin
         DeleteApiKey(true);
         DeleteApiKey(false);
@@ -89,10 +99,10 @@ table 86490 "B2Brouter Setup"
     internal procedure SetKeysIfAvailable(var ProductionKey: Text; var SandboxKey: Text)
     begin
         if IsolatedStorage.Contains(GetApiKeyIdentifier(true), DataScope::Company) then
-            SandboxKey := '*';
+            SandboxKey := '****';
 
         if IsolatedStorage.Contains(GetApiKeyIdentifier(false), DataScope::Company) then
-            ProductionKey := '*';
+            ProductionKey := '****';
     end;
 
     local procedure GetApiKeyIdentifier(SandboxMode: Boolean): Text

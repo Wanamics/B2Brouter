@@ -1,5 +1,5 @@
 #if FALSE
-namespace BBrouter.BBrouter;
+namespace B2Brouter.B2Brouter;
 
 using Microsoft.eServices.EDocument;
 

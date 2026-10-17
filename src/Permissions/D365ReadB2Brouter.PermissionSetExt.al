@@ -8,5 +8,5 @@ using System.Security.AccessControl;
 
 permissionsetextension 86491 "D365 Read - B2Brouter" extends "D365 READ"
 {
-    IncludedPermissionSets = "B2Brouter Edit";
+    IncludedPermissionSets = "B2BrouterW Edit";
 }

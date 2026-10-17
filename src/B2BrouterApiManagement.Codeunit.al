@@ -56,7 +56,7 @@ codeunit 86490 "B2Brouter Api Management"
         HttpContentHeader: HttpHeaders;
     begin
         TempBlob.CreateInStream(InStream);
-        HttpRequest.Content.WriteFrom(StrSubstNo(HttpConcentLbl, EDocument."Document No.", Base64Convert.ToBase64(InStream)));
+        HttpRequest.Content.WriteFrom(StrSubstNo(HttpContentLbl, EDocument."Document No.", Base64Convert.ToBase64(InStream)));
         HttpRequest.Content.GetHeaders(HttpContentHeader);
 
         if HttpContentHeader.Contains('content-type') then
@@ -232,6 +232,7 @@ codeunit 86490 "B2Brouter Api Management"
         InStream: InStream;
         JSonToken: JsonToken;
         FileId: Integer;
+        TEMP: Text;
     begin
         DocumentMetadata.CreateInStream(InStream);
 
@@ -245,6 +246,11 @@ codeunit 86490 "B2Brouter Api Management"
         DownloadDocument(TempBlob, FileId, ReceiveContext);
 
         ReceiveContext.SetTempBlob(TempBlob);
+
+
+
+        // InStream.ReadText(TEMP);
+        // message('Download:%1', TEMP)
     end;
 
     internal procedure DownloadDocument(var TempBlob: Codeunit "Temp Blob"; FileId: Integer; ReceiveContext: Codeunit ReceiveContext)
@@ -279,15 +285,15 @@ codeunit 86490 "B2Brouter Api Management"
             if (not B2BrouterSetup.GetApiKey(true, ApiKey)) or ApiKey.IsEmpty() then
                 Error(NoApiKeyFoundErr, 'staging');
 
-            B2BrouterSetup.TestField("Sandbox Project");
-            Project := B2BrouterSetup."Sandbox Project";
+            B2BrouterSetup.TestField("Sandbox Account ID");
+            AccountID := B2BrouterSetup."Sandbox Account ID";
             BaseUrl := GetBaseURL(true);
         end else begin
             if (not B2BrouterSetup.GetApiKey(false, ApiKey)) or ApiKey.IsEmpty() then
                 Error(NoApiKeyFoundErr, 'production');
 
-            B2BrouterSetup.TestField("Production Project");
-            Project := B2BrouterSetup."Production Project";
+            B2BrouterSetup.TestField("Production Account ID");
+            AccountID := B2BrouterSetup."Production Account ID";
             BaseUrl := GetBaseURL(false);
         end;
 
@@ -299,10 +305,12 @@ codeunit 86490 "B2Brouter Api Management"
 
     internal procedure GetBaseURL(SandboxMode: Boolean) Url: Text
     begin
+        /*[CWA Sandbox do not refer to staging API
         if SandboxMode then
             Url := SandboxBaseUrlLbl
         else
-            Url := ProdBaseUrlLbl;
+        CWA]*/
+        Url := ProdBaseUrlLbl;
     end;
 
     internal procedure GetBaseUrl(): Text
@@ -311,10 +319,10 @@ codeunit 86490 "B2Brouter Api Management"
         exit(BaseUrl);
     end;
 
-    internal procedure GetProject(): Text
+    internal procedure GetAccountID(): Text
     begin
         InitRequestData();
-        exit(Project)
+        exit(AccountID)
     end;
 
     internal procedure GetApiKey(): SecretText
@@ -329,7 +337,7 @@ codeunit 86490 "B2Brouter Api Management"
     begin
         InitRequestData();
 
-        EndpointUrl := StrSubstNo(BaseUrl + ImportEndpointLbl, Project);
+        EndpointUrl := StrSubstNo(BaseUrl + ImportEndpointLbl, AccountID);
         HttpRequest := CreateNewHttpRequest(EndpointUrl, 'POST');
     end;
 
@@ -349,7 +357,7 @@ codeunit 86490 "B2Brouter Api Management"
     begin
         InitRequestData();
 
-        EndpointUrl := StrSubstNo(BaseUrl + ReceiveInvoicesEndpointLbl, Project);
+        EndpointUrl := StrSubstNo(BaseUrl + ReceiveInvoicesEndpointLbl, AccountID);
         HttpRequest := CreateNewHttpRequest(EndpointUrl, 'GET');
     end;
 
@@ -404,7 +412,16 @@ codeunit 86490 "B2Brouter Api Management"
     end;
 
     internal procedure CreateNewHttpRequest(Url: Text; Method: Text) Result: HttpRequestMessage
+    var
+        B2BrouterSetup: Record "B2Brouter Setup";
     begin
+        //[WAN
+        if UPPERCASE(Method) <> 'GET' then begin
+            B2BrouterSetup.Get();
+            if B2BrouterSetup."GET Request Only" then
+                exit;
+        end;
+        //WAN]
         Result.SetRequestUri(Url);
         Result.Method := Method;
     end;
@@ -416,21 +433,47 @@ codeunit 86490 "B2Brouter Api Management"
     end;
 
     var
+        //[CWA API v2026-06-26 uses resource /accounts insteed of /projects]
         NoApiKeyFoundErr: Label 'No API Key found for %1 environment. Please setup API Key first.', Comment = '%1 => Production/Sandbox environment';
-        ImportEndpointLbl: Label '/projects/%1/invoices/import.json/?send_after_import=true', Comment = '%1 => Project.', Locked = true;
+        ImportEndpointLbl: Label '/accounts/%1/invoices/import.json/?send_after_import=true', Comment = '%1 => Account.', Locked = true; //WAN
         SpecificInvoiceEndpointLbl: Label '/invoices/%1.json', Comment = '%1 => API file Id.', Locked = true;
         ConvertInvoiceEndpointLbl: Label '/invoices/%1/as/%2', Comment = '%1 => File Id. %2 => Filetype', Locked = true;
-        ReceiveInvoicesEndpointLbl: Label '/projects/%1/received.json', Comment = '%1 => Project.', Locked = true;
+        // ReceiveInvoicesEndpointLbl: Label '/projects/%1/received.json', Comment = '%1 => Project.', Locked = true;
+        // ReceiveInvoicesEndpointLbl: Label '/accounts/%1/received.json', Comment = '%1 => Account.', Locked = true;
+
+        ReceiveInvoicesEndpointLbl: Label '/accounts/%1/invoices?type=ReceivedInvoice', Comment = '%1 => Account.', Locked = true;//WAN
+        // ReceiveInvoicesEndpointLbl: Label '/accounts/%1/invoices?type=ReceivedInvoice&ack=true', Comment = '%1 => Account.', Locked = true;//WAN
         SendInvoicesEndpointLbl: Label '/invoices/send_invoice/%1.json', Comment = '%1 => File Id', Locked = true;
         AcknowledgeInvoiceEndpointLbl: Label '/invoices/%1/ack.json', Comment = '%1 => File Id', Locked = true;
-        HttpConcentLbl: Label 'data:text/xml;name=%1.XML;base64,%2', Comment = '%1 => file name, %2 => Base64 encoded data', Locked = true;
+        HttpContentLbl: Label 'data:text/xml;name=%1.XML;base64,%2', Comment = '%1 => file name, %2 => Base64 encoded data', Locked = true;
         FailedToConsumeApiErr: Label 'Failed to consume API.';
-        ProdBaseUrlLbl: Label 'https://app.b2brouter.net', Locked = true;
-        SandboxBaseUrlLbl: Label 'https://app-staging.b2brouter.net', Locked = true;
+        ProdBaseUrlLbl: Label 'https://api.b2brouter.net', Locked = true; //WAN
+        // SandboxBaseUrlLbl: Label 'https://api-staging.b2brouter.net', Locked = true; //WAN
         HttpClient: HttpClient;
         HttpHeaders: HttpHeaders;
         BaseUrl: Text;
-        Project: Text;
+        AccountID: Text;
         RequestDataInitialized: Boolean;
         ApiKey: SecretText;
+
+    internal procedure GetApiVersion(): Text
+    begin
+        exit('2026-06-26');
+    end;
+
+    internal procedure CheckAuthentication()
+    var
+        HttpRequest: HttpRequestMessage;
+        HttpResponse: HttpResponseMessage;
+        AuthenticationSucceedMsg: Label 'Authentication Succeed with Status: %1';
+        AuthenticationErrorMsg: Label 'Authentication Error:%1, Message: %2';
+    begin
+        RequestDataInitialized := false;
+        InitRequestData();
+        HttpRequest := CreateNewHttpRequest(BaseUrl + '/languages', 'GET');
+        if this.HttpClient.Send(HttpRequest, HttpResponse) then
+            Message(AuthenticationSucceedMsg, HttpResponse.HttpStatusCode)
+        else
+            Error(AuthenticationErrorMsg, HttpResponse.HttpStatusCode, HttpResponse.ReasonPhrase);
+    end;
 }

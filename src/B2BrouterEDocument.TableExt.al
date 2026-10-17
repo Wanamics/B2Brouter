@@ -11,8 +11,10 @@ tableextension 86490 "B2Brouter E-Document" extends "E-Document"
     {
         field(86490; "B2Brouter File Id"; Integer)
         {
-            Caption = 'File Id';
+            Caption = 'B2Brouter File Id';
+            ToolTip = 'B2Brouter File Id';
             DataClassification = CustomerContent;
+            Editable = false;
         }
     }
 }

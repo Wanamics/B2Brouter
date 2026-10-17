@@ -31,7 +31,7 @@
   "application": "$(app_minimumVersion)",
   "idRanges": [
     {
-      "from": 86490,
+      "from": 6490,
       "to": 6500
     }
   ],

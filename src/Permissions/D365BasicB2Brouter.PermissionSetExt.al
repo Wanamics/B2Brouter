@@ -8,5 +8,5 @@ using Microsoft.EServices.EDocument;
 
 permissionsetextension 86490 "D365 Basic - B2Brouter" extends "E-Doc. Core - Admin"
 {
-    IncludedPermissionSets = "B2Brouter Edit";
+    IncludedPermissionSets = "B2BrouterW Edit";
 }

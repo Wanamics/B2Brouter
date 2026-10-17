@@ -4,10 +4,11 @@
 // ------------------------------------------------------------------------------------------------
 namespace Wanamics.EServices.EDocumentConnector.B2Brouter;
 
-permissionset 86490 "B2Brouter Edit"
+permissionset 86490 "B2BrouterW Edit"
 {
+    Caption = 'B2Brouter (Wanamics) Edit';
     Assignable = true;
-    IncludedPermissionSets = "B2Brouter Read";
+    IncludedPermissionSets = "B2BrouterW Read";
     Permissions =
         tabledata "B2Brouter Setup" = imd;
 }

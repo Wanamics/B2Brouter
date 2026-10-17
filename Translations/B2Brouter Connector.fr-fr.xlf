@@ -3,6 +3,82 @@
   <file datatype="xml" source-language="en-US" target-language="fr-FR" original="B2Brouter Connector.g.xlf">
     <body>
       <group id="body">
+        <trans-unit id="PageExtension 4102148806 - Control 4157386039 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4102148806">
+          <source>Wanamics</source>
+          <target>Wanamics</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension E-Document Service - Control Wanamics - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4102148806 - Control 2463667757 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4102148806">
+          <source>!! reuses "Embed PDF in export" but should be a distinct field ?</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension E-Document Service - Control Embed PDF in import - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4102148806 - Control 2463667757 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4102148806">
+          <source>(Embed PDF in import)</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension E-Document Service - Control Embed PDF in import - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4048657685 - Action 2010491616 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4048657685">
+          <source>View E-Document</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Purchase Invoice - Action B2BrouterView - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4048657685 - Action 2010491616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4048657685">
+          <source>View E-Document</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Purchase Invoice - Action B2BrouterView - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 407220332 - Action 2010491616 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 407220332">
+          <source>View E-Document</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Purchase Invoices - Action B2BrouterView - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 407220332 - Action 2010491616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 407220332">
+          <source>View E-Document</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Purchase Invoices - Action B2BrouterView - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2437096118 - Action 2010491616 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2437096118">
+          <source>View E-Document</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purchase Invoice - Action B2BrouterView - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2437096118 - Action 2010491616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2437096118">
+          <source>View E-Document</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purchase Invoice - Action B2BrouterView - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4037192291 - Action 2010491616 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4037192291">
+          <source>View E-Document</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purchase Invoices - Action B2BrouterView - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4037192291 - Action 2010491616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4037192291">
+          <source>View E-Document</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purchase Invoices - Action B2BrouterView - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2900421778 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>B2Brouter Setup</source>
           <target>Configuration B2Brouter</target>
@@ -21,17 +97,29 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table B2Brouter Setup - Field PK - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2900421778 - Field 1763353490 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the project name for the B2Brouter production environment.</source>
-          <target>Spécifie le compte B2Brouter utilisé en production.</target>
+        <trans-unit id="Table 2900421778 - Field 3028337865 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Account ID for the B2Brouter production environment.</source>
+          <target>Spécifie l'identifiant du compte B2Brouter de l'environnement de production.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table B2Brouter Setup - Field Production Project - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table B2Brouter Setup - Field Production Account ID - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Table 2900421778 - Field 1763353490 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Project</source>
-          <target>Compte B2Brouter</target>
+        <trans-unit id="Table 2900421778 - Field 3028337865 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production Account ID</source>
+          <target>ID Compte Production</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table B2Brouter Setup - Field Production Project - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table B2Brouter Setup - Field Production Account ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2900421778 - Field 4094307539 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Account ID for the B2Brouter sandbox environment.</source>
+          <target>Spécifie l'identifiant du compte B2Brouter de l'environnement Sandbox.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table B2Brouter Setup - Field Sandbox Account ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2900421778 - Field 4094307539 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sandbox Account ID</source>
+          <target>ID compte Sandbox</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table B2Brouter Setup - Field Sandbox Account ID - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2900421778 - Field 3344701050 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies whether the connector is in sandbox mode.</source>
@@ -45,18 +133,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table B2Brouter Setup - Field Sandbox Mode - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2900421778 - Field 1928539420 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the project name for the B2Brouter sandbox environment.</source>
-          <target>Compte B2Brouter utilisé en mode Staging.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table B2Brouter Setup - Field Sandbox Project - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2900421778 - Field 1928539420 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sandbox Project</source>
-          <target>Compte B2Brouter en mode Staging.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table B2Brouter Setup - Field Sandbox Project - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Codeunit 2313483526 - NamedType 680877491" size-unit="char" translate="yes" xml:space="preserve">
           <source>Failed to consume API.</source>
           <target>Echec de consommation de l'API.</target>
@@ -68,6 +144,18 @@
           <target>Aucune clé API trouvée pour l'environnement %1. Veuillez d'abord configurer la clé API.</target>
           <note from="Developer" annotates="general" priority="2">%1 =&gt; Production/Sandbox environment</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit B2Brouter Api Management - NamedType NoApiKeyFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2313483526 - Method 1976637714 - NamedType 1617686325" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authentication Succeed with Status: %1</source>
+          <target>Authentification accordée, statut : %1</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit B2Brouter Api Management - Method CheckAuthentication - NamedType AuthenticationSucceedMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2313483526 - Method 1976637714 - NamedType 1053074267" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authentication Error:%1, Message: %2</source>
+          <target>Erreur d'authentification %1, message : %2</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit B2Brouter Api Management - Method CheckAuthentication - NamedType AuthenticationErrorMsg</note>
         </trans-unit>
         <trans-unit id="Page 2900421778 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>B2Brouter Setup</source>
@@ -88,50 +176,70 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Control Production API-Key - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2900421778 - Control 2343602115 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>API Key</source>
-          <target>Clé API</target>
+          <source>Production API Key</source>
+          <target>Clé API en Production</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Control Production API-Key - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2900421778 - Control 1763353490 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Project</source>
-          <target>Compte B2Brouter</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Control Production Project - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2900421778 - Control 492010123 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2900421778 - Control 3957778759 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sandbox Environment</source>
-          <target>Environnement de Staging.</target>
+          <target>Environnement Sandbox</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Control Staging - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Control Sandbox - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2900421778 - Control 711363629 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the key that is used for the staging environment.</source>
-          <target>Spécifie la clé API utilisée en mode Staging.</target>
+        <trans-unit id="Page 2900421778 - Control 881956905 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the key that is used for the sandbox environment.</source>
+          <target>Spécificie la clé API de l'environnement Sandbox.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Control Staging API-Key - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Control Sandbox API-Key - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 2900421778 - Control 711363629 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>API Key</source>
-          <target>Clé API</target>
+        <trans-unit id="Page 2900421778 - Control 881956905 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SandboxAPI Key</source>
+          <target>Clé API en Sandbox</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Control Staging API-Key - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Control Sandbox API-Key - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2900421778 - Control 479276376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Project</source>
-          <target>Compte B2Brouter</target>
+        <trans-unit id="Page 2900421778 - Action 1976637714 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check Authentication</source>
+          <target>Tester l'authentification</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Control Staging Project - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Action CheckAuthentication - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 2900421778 - Control 2776935966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Staging Mode</source>
-          <target>Mode Staging</target>
+        <trans-unit id="Page 2900421778 - Action 1976637714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check Authentication</source>
+          <target>Tester l'authentification</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Control Staging Mode - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page B2Brouter Setup - Action CheckAuthentication - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1524924071 - Action 303255325 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2429668632">
+          <source>View in B2Brouter</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension B2Brouter E-Documents - Action View in B2Brouter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1524924071 - Action 303255325 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2429668632">
+          <source>View in B2Brouter</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension B2Brouter E-Documents - Action View in B2Brouter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1036788762 - Method 2236790597 - NamedType 3415447349" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 1036788762">
+          <source>%1-%2-%3.pdf</source>
+          <target>%1-%2-%3.pdf</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension B2Brouter E-Document - Method B2BrouterViewer - NamedType FileNameLbl</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1036788762 - Field 1407522918 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4128474945">
+          <source>B2Brouter File Id</source>
+          <target>ID fichier B2Brouter</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension B2Brouter E-Document - Field B2Brouter File Id - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 1036788762 - Field 1407522918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4128474945">
-          <source>File Id</source>
-          <target>N° fichier B2Brouter</target>
+          <source>B2Brouter File Id</source>
+          <target>ID fichier B2Brouter</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension B2Brouter E-Document - Field B2Brouter File Id - Property Caption</note>
         </trans-unit>

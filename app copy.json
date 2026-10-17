@@ -1,20 +1,41 @@
 {
-  "id": "b4305a63-f987-425b-8520-ca9ccf7b22b6",
+  "id": "f669397b-15b9-4f3a-8366-1e6f8968f2e1",
   "name": "B2Brouter Connector",
-  "publisher": "Wanamics Fork",
-  "version": "28.4.53241.53313",
+  "publisher": "Wanamics",
+  "version": "1.0.0.0",
   "brief": "",
   "description": "",
   "privacyStatement": "",
   "EULA": "",
   "help": "",
   "url": "",
-  "logo": "",
+  "logo": "logo.png",
   "dependencies": [
     {                                                                                                                                                                                                                                                                                                               
       "id": "e1d97edc-c239-46b4-8d84-6368bdf67c8b",
       "name": "E-Document Core",
       "publisher": "Microsoft",
+      "version": "28.4.53241.53312"
+    }
+    ,
+    {
+      "id": "44469049-4bb4-4a32-82ab-f6c34d0204d3",
+      "name": "E-Reporting FR",
+      "publisher": "Microsoft",
+      "version": "28.4.53241.53312"
+    }
+    ,
+    {
+      "id": "de0dddf3-9917-430d-8d20-6e7679a08500",
+      "name": "E-Document Core Demo Data",
+      "publisher": "Microsoft",
+      "version": "28.4.53241.53312"
+    }
+    ,
+    {
+      "id": "e1966889-b5fb-4fda-a84c-ea71b590e1a9",
+      "name": "PEPPOL",
+      "publisher" :"Microsoft",
       "version": "28.4.53241.53312"
     }
   ],
@@ -25,6 +46,10 @@
     {
       "from": 86490,
       "to": 86499
+    },
+    {
+      "from": 86500,
+      "to": 86509
     }
   ],
   "resourceExposurePolicy": {
@@ -34,6 +59,8 @@
   },
   "runtime": "17.0",
   "features": [
-    "NoImplicitWith"
+    "NoImplicitWith",
+    "TranslationFile", 
+    "GenerateCaptions"
   ]
 }

@@ -20,10 +20,11 @@ page 86490 "B2Brouter Setup"
         area(Content)
         {
 
-            field("Staging Mode"; Rec."Sandbox Mode")
+            field("Sandbox Mode"; Rec."Sandbox Mode")
             {
-                Caption = 'Staging Mode';
-                ApplicationArea = All;
+            }
+            field("GET Request Only"; Rec."GET Request Only")
+            {
             }
 
             group(Production)
@@ -33,10 +34,10 @@ page 86490 "B2Brouter Setup"
 
                 field("Production API-Key"; ProductionApiKey)
                 {
-                    Caption = 'API Key';
+                    Caption = 'Production API Key';
                     ToolTip = 'Specifies the key that is used for the production environment.';
                     ApplicationArea = All;
-                    ExtendedDatatype = Masked;
+                    MaskType = Concealed;
                     ShowMandatory = true;
 
                     trigger OnValidate()
@@ -48,24 +49,22 @@ page 86490 "B2Brouter Setup"
                     end;
                 }
 
-                field("Production Project"; Rec."Production Project")
+                field("Production Account ID"; Rec."Production Account ID")
                 {
-                    Caption = 'Project';
-                    ApplicationArea = All;
                 }
             }
 
-            group(Staging)
+            group(Sandbox)
             {
                 Caption = 'Sandbox Environment';
-                Visible = rec."Sandbox Mode";
+                Visible = Rec."Sandbox Mode";
 
-                field("Staging API-Key"; SandboxApiKey)
+                field("Sandbox API-Key"; SandboxApiKey)
                 {
-                    Caption = 'API Key';
-                    ToolTip = 'Specifies the key that is used for the staging environment.';
+                    Caption = 'SandboxAPI Key';
+                    ToolTip = 'Specifies the key that is used for the sandbox environment.';
                     ApplicationArea = All;
-                    ExtendedDatatype = Masked;
+                    MaskType = Concealed;
                     ShowMandatory = true;
 
                     trigger OnValidate()
@@ -78,20 +77,38 @@ page 86490 "B2Brouter Setup"
 
                 }
 
-                field("Staging Project"; Rec."Sandbox Project")
+                field("Sandbox Account ID"; Rec."Sandbox Account ID")
                 {
-                    Caption = 'Project';
-                    ApplicationArea = All;
                 }
-
             }
+        }
+    }
+    actions
+    {
+        area(Processing)
+        {
+            action(CheckAuthentication)
+            {
+                Caption = 'Check Authentication';
+                ToolTip = 'Check Authentication';
+                trigger OnAction()
+                var
+                    ApiManagement: Codeunit "B2Brouter Api Management";
+                begin
+                    ApiManagement.CheckAuthentication();
+                end;
+            }
+        }
+        area(Promoted)
+        {
+            actionref(CheckAuthentication_Promoted; CheckAuthentication) { }
         }
     }
 
     local procedure StoreKey(Sandbox: Boolean; var ApiKey: Text)
     begin
         Rec.StoreApiKey(Sandbox, ApiKey);
-        ApiKey := '*';
+        ApiKey := '****';
     end;
 
     trigger OnOpenPage()
